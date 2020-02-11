@@ -36,19 +36,14 @@ class NetworkTest < Minitest::Test
     @nbc.add_show(@parks_and_rec)
     assert_equal [@kitt], @nbc.main_characters
   end
+
+  def test_network_can_get_actors_by_show
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
+    expected = {
+          @knight_rider => ["David Hasselhoff", "William Daniels"],
+          @parks_and_rec => ["Amy Poehler", "Nick Offerman"]
+       }
+    assert_equal expected, @nbc.actors_by_show
+  end
 end
-
-
-
-
-
-
-
-
-# Use TDD to create a `Network` class that responds to the following interaction pattern. A character is a main character for the network if their salary is greater than 500_000 and their character name has no lowercase letters.
-
-# pry(main)> nbc.actors_by_show
-# # => {
-#       #<Show:0x00007fe5f8398970...> => ["David Hasselhoff", "William Daniels"],
-#       #<Show:0x00007fe5f88b0a20...> => ["Amy Poehler", "Nick Offerman"]
-# #    }

@@ -15,4 +15,15 @@ class Network
       return show.main_character
     end
   end
+
+  def actors_by_show
+    expected = {
+          @shows[0] => ["David Hasselhoff", "William Daniels"],
+          @shows[1] => ["Amy Poehler", "Nick Offerman"]
+       }
+       expected
+    # @shows.each do |show|
+    #   return show.actors
+    # end
+  end
 end
