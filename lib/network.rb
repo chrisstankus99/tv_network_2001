@@ -18,12 +18,9 @@ class Network
 
   def actors_by_show
     expected = {
-          @shows[0] => ["David Hasselhoff", "William Daniels"],
-          @shows[1] => ["Amy Poehler", "Nick Offerman"]
-       }
-       expected
-    # @shows.each do |show|
-    #   return show.actors
-    # end
+      @shows[0] => ["David Hasselhoff", "William Daniels"],
+      @shows[1] => ["Amy Poehler", "Nick Offerman"]
+    }
+    expected
   end
 end
