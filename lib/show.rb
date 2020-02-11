@@ -25,4 +25,8 @@ class Show
     end
     array_of_actors
   end
+
+  def main_character
+    @characters.find_all {|character| character.name.upcase == character.name && character.salary > 500000}
+  end
 end

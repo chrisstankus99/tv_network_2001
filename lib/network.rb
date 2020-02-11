@@ -9,4 +9,10 @@ class Network
   def add_show(show)
     @shows << show
   end
+
+  def main_characters
+    @shows.each do |show|
+      return show.main_character
+    end
+  end
 end
