@@ -19,11 +19,7 @@ class Show
   end
 
   def actors
-    array_of_actors = []
-    @characters.each do |character|
-      array_of_actors << character.actor
-    end
-    array_of_actors
+    @characters.map {|character| character.actor}
   end
 
   def main_character
